@@ -783,3 +783,134 @@ h4 {
     color: var(--primary);
     border-color: var(--primary);
 }
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+
+    /* Layout Adjustments */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        top: auto;
+        flex-direction: row;
+        padding: 0;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+        justify-content: space-between;
+        align-items: center;
+        background: var(--bg-side);
+        z-index: 1000;
+    }
+
+    .main-wrapper {
+        margin-left: 0;
+        margin-bottom: 70px; /* Space for bottom nav */
+    }
+
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .content-area {
+        padding: 1rem;
+    }
+
+    /* Sidebar Elements */
+    .brand {
+        display: none; /* Hide brand on mobile */
+    }
+
+    .sidebar > div[style*="margin-top: auto"] {
+        display: none; /* Hide user profile section */
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 4px;
+        font-size: 0.65rem;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-link svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-link span {
+        display: block; /* Ensure text labels are shown below icons */
+    }
+
+    /* Header */
+    .top-bar {
+        padding: 0 1rem;
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar > div:first-child {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .status-pill {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Typography */
+    h1.page-title {
+        font-size: 1.25rem;
+    }
+
+    /* Cards & Inputs */
+    .nav-tabs {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .tab-pill {
+        white-space: nowrap;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .btn-clinical {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Bubble text */
+    .transcript-bubble {
+        max-width: 100%;
+    }
+}
